@@ -5,7 +5,7 @@ Facter.add('ghost_vulnerable') do
   setcode do
 
     # glibc-2.12-1.132.el6.x86_64
-    glibc_rpm = Facter::Core::Execution.exec(%q[rpm -q --qf '%{name}-%{version}-%{release}.%{arch}\\n' glibc2])
+    glibc_rpm = Facter::Core::Execution.exec(%q[rpm -q --qf '%{name}-%{version}-%{release}.%{arch}\\n' glibc])
 
     if glibc_rpm.include?('not installed') == false and glibc_rpm.empty? == false
       # there may be more than one package name espeically if the 64bit and 32bit version are
