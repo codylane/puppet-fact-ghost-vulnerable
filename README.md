@@ -4,6 +4,10 @@ A facter ruby plugin to determine if RedHat based machines are affected by the G
 # Background
 See this link https://access.redhat.com/articles/1332213
 
+# Supported OS Families
+Currently supported OS families:
+* RedHat
+
 # Disclaimer
 This code is intended to help you identify if your OS version of `glibc` is vulnerable.
 
