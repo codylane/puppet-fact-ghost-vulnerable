@@ -20,7 +20,7 @@ Facter.add('ghost_vulnerable') do
         'false'
       else
         # all RHEL updates include CVE in rpm %changelog
-        chg_log = Facter::Core::Execution.exec("rpm -q --changelog #{glibc_rpm} | grep -q 'CVE-2015-0235'")
+        chg_log = Facter::Core::Execution.exec("rpm -q --changelog #{glibc_rpm} | grep 'CVE-2015-0235'")
 
         chg_log.empty?
       end
